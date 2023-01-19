@@ -1,0 +1,12 @@
+@import './typography.pcss';
+@import './components.pcss';
+@import './utilities.pcss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #000;
+}
