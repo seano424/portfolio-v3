@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import React from 'react'
 import Link from 'next/link'
 import { useAtom } from 'jotai'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { sideBarAtom } from 'store'

@@ -1,4 +1,7 @@
-import { useRouter } from 'next/router'
+'use client'
+
+import { useRouter } from 'next/navigation'
+
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -66,7 +69,7 @@ export default function Cursor() {
     addEventListeners()
     handleLinkHoverEvents()
     return () => removeEventListeners()
-  }, [router.asPath])
+  }, [router])
 
   if (typeof navigator !== 'undefined' && isMobile()) return null
   return (

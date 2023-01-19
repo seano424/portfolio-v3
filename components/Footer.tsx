@@ -1,8 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 import GitHub from '@/icons/GitHub'
 import Twitter from '@/icons/Twitter'
 import LinkedIn from '@/icons/LinkedIn'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 const socialLinks = [
   {

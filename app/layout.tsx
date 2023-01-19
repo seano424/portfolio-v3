@@ -1,8 +1,9 @@
+'use client'
+
 import clsx from 'clsx'
 import '../styles/globals.css'
 import { useAtom } from 'jotai'
 import { themeAtom } from 'store'
-import React, { useEffect } from 'react'
 import { Inter } from '@next/font/google'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -21,21 +22,6 @@ export default function RootLayout({
 }) {
   const devMode = process.env.ENVIRONMENT === 'dev'
   const [theme] = useAtom(themeAtom)
-
-  useEffect(() => {
-    console.log(
-      '\n',
-      'Hello there!',
-      '\n',
-      'Want to reach out?!',
-      '\n',
-      'Shoot me an email @',
-      '\n',
-      'soreilly424@gmail.com',
-      '\n',
-      '🤗'
-    )
-  }, [])
 
   const spring = {
     type: 'spring',

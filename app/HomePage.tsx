@@ -1,8 +1,11 @@
+'use client'
+
 import Link from 'next/link'
 import GitHub from '@/icons/GitHub'
 import Twitter from '@/icons/Twitter'
 import LinkedIn from '@/icons/LinkedIn'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 const socialLinks = [
   {
@@ -28,7 +31,22 @@ const socialLinks = [
   },
 ]
 
-export default function Home() {
+export default function HomePage() {
+  useEffect(() => {
+    console.log(
+      '\n',
+      'Hello there!',
+      '\n',
+      'Want to reach out?!',
+      '\n',
+      'Shoot me an email @',
+      '\n',
+      'soreilly424@gmail.com',
+      '\n',
+      '🤗'
+    )
+  }, [])
+
   return (
     <section className="py-base relative overflow-hidden">
       <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] overflow-hidden transition-all ease-linear lg:bottom-0 xl:bottom-28 2xl:bottom-0">
