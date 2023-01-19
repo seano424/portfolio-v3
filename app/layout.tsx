@@ -29,7 +29,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={clsx(theme)}>
+    <html lang="en">
       <body className={clsx(devMode && 'debug-screens')}>
         <AnimatePresence initial={false}>
           {theme && (
