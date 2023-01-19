@@ -1,5 +1,3 @@
-'use client'
-
 import { useAtom } from 'jotai'
 import { Squash } from 'hamburger-react'
 import { useState, useEffect } from 'react'

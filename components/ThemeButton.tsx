@@ -1,5 +1,3 @@
-'use client'
-
 import { useAtom } from 'jotai'
 import { useState, useEffect } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
