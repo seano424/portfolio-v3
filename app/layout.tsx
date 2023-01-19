@@ -1,5 +1,4 @@
 'use client'
-
 import clsx from 'clsx'
 import '../styles/globals.css'
 import { useAtom } from 'jotai'
@@ -22,7 +21,6 @@ export default function RootLayout({
 }) {
   const devMode = process.env.ENVIRONMENT === 'dev'
   const [theme] = useAtom(themeAtom)
-
   const spring = {
     type: 'spring',
     stiffness: 700,
@@ -30,7 +28,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en">
+    <html lang="en" className={clsx(theme)}>
       <body className={clsx(devMode && 'debug-screens')}>
         <AnimatePresence initial={false}>
           {theme && (

@@ -28,12 +28,7 @@ export default function ThemeButton() {
       },
     },
   }
-
-  useEffect(() => {
-    document.body.classList.remove('light', 'dark')
-    document.body.classList.add(theme)
-  }, [theme])
-
+  
   useEffect(() => {
     setIcon(() =>
       theme === 'dark' ? (
