@@ -1,8 +1,5 @@
 import clsx from 'clsx'
-import { Inter } from '@next/font/google'
 import { parseISO, format } from 'date-fns'
-
-const inter = Inter({})
 
 type Props = {
   dateString: string
@@ -15,7 +12,7 @@ const Date = ({ dateString, card = false }: Props) => {
   return (
     <time
       className={clsx(
-        'tracking-tighter font-black',
+        'font-black tracking-tighter',
         card ? 'dark:text-dark' : 'dark:text-primary-100'
       )}
       dateTime={dateString}

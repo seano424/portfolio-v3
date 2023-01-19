@@ -5,15 +5,15 @@ import {
 } from 'next'
 import { getAllPostIds, getPostData } from '../../../lib/posts'
 import Date from '@/components/Date'
-import { useRouter } from 'next/router'
 import { ArrowLeftIcon } from '@heroicons/react/24/solid'
+import { useRouter } from 'next/router'
 import { PostType } from '@/lib/types'
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { back } = useRouter()
 
   return (
-    <div className="pl-base lg:pl-auto container pt-5 dark:text-white lg:pt-20">
+    <section className="pl-base lg:pl-auto container pt-5 dark:text-white lg:pt-20">
       <div className="grid gap-3">
         <button
           onClick={() => back()}
@@ -31,7 +31,7 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
         className="rich-text prose my-5 max-w-none dark:text-white"
         dangerouslySetInnerHTML={{ __html: post.contentHtml! }}
       />
-    </div>
+    </section>
   )
 }
 

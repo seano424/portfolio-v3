@@ -65,3 +65,13 @@ export function getAllPostIds() {
     }
   })
 }
+
+export function getAllPostIdsinApp() {
+  const fileNames = fs.readdirSync(postsDirectory)
+
+  return fileNames.map((fileName) => {
+    return {
+      id: fileName.replace(/\.md$/, ''),
+    }
+  })
+}
