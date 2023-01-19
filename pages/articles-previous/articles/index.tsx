@@ -1,12 +1,7 @@
-import clsx from 'clsx'
-import { Inter } from '@next/font/google'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
-
-import { getSortedPostsData } from '@/lib/posts'
 import ArticleCard from '@/components/ArticleCard'
+import { getSortedPostsData } from '@/lib/posts'
 import { PostType } from '@/lib/types'
-
-const inter = Inter()
 
 export default function index({
   posts,
@@ -23,12 +18,7 @@ export default function index({
           <div className="grid h-min gap-6" key={post.id}>
             <ArticleCard {...post} />
             {post.excerpt && (
-              <p
-                className={clsx(
-                  'prose px-3 text-lg font-light text-primary-900 transition-all duration-100 ease-linear dark:text-white md:text-xl',
-                  inter.className
-                )}
-              >
+              <p className="prose px-3 text-lg font-light text-primary-900 transition-all duration-100 ease-linear dark:text-white md:text-xl">
                 {post.excerpt}
               </p>
             )}

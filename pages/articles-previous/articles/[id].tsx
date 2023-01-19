@@ -3,7 +3,7 @@ import {
   InferGetStaticPropsType,
   GetStaticPropsContext,
 } from 'next'
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getPostData } from '../../../lib/posts'
 import Date from '@/components/Date'
 import { useRouter } from 'next/router'
 import { ArrowLeftIcon } from '@heroicons/react/24/solid'
