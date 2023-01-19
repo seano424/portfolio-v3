@@ -2,7 +2,7 @@ import Link from 'next/link'
 import GitHub from '@/icons/GitHub'
 import Twitter from '@/icons/Twitter'
 import LinkedIn from '@/icons/LinkedIn'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const socialLinks = [
   {
@@ -29,11 +29,11 @@ const socialLinks = [
 ]
 
 export default function Footer() {
-  const router = useRouter()
+  const pathname = usePathname()
 
   return (
     <footer className="flex flex-col-reverse gap-5 pb-5">
-      {router.pathname !== '/' && (
+      {pathname !== '/' && (
         <div className="flex justify-center gap-5">
           {socialLinks.map((link) => (
             <Link
