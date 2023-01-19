@@ -1,4 +1,5 @@
 'use client'
+
 import clsx from 'clsx'
 import '../styles/globals.css'
 import { useAtom } from 'jotai'
