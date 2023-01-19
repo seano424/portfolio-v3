@@ -1,6 +1,5 @@
-import { useRouter, usePathname, useSearchParams } from 'next/navigation'
-
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Cursor() {
@@ -9,9 +8,7 @@ export default function Cursor() {
   const [clicked, setClicked] = useState(false)
   const [linkHovered, setLinkHovered] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const router = useRouter()
   const pathname = usePathname()
-  const searchParams = useSearchParams()
 
   const isMobile = () => {
     const ua = navigator.userAgent
